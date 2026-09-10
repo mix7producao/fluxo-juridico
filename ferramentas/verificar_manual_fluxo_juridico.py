@@ -28,7 +28,16 @@ def main():
 
     document = Document(FINAL)
     body = "\n".join(paragraph.text for paragraph in document.paragraphs)
-    required = ("Manual do Fluxo Jurídico", "O que você passa a ter", "Regra de sigilo")
+    required = (
+        "Manual de instalação do Fluxo Jurídico",
+        "https://github.com/mix7producao/fluxo-juridico",
+        "ChatGPT para a equipe",
+        "Codex",
+        "Claude no navegador",
+        "Claude Code",
+        "Como a peça em Word será entregue",
+        "Regra de sigilo",
+    )
     if not all(item in body for item in required):
         raise RuntimeError("O manual não contém todas as seções obrigatórias.")
     if "[A CONFIRMAR" in body or "TODO" in body:
