@@ -1,0 +1,4 @@
+interface:
+  display_name: "Redigir peça jurídica"
+  short_description: "Analisa o caso e produz a peça em Word"
+  default_prompt: "Use $redigir-peca-juridica para analisar este caso e produzir a peça jurídica editável."

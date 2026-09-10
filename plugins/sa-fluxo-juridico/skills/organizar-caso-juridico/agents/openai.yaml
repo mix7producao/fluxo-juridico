@@ -1,0 +1,7 @@
+interface:
+  display_name: "Organizar novo caso jurídico"
+  short_description: "Organiza provas e contexto de um novo caso"
+  default_prompt: "Use $organizar-caso-juridico para iniciar e organizar este novo caso sem alterar os arquivos originais."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,39 +1,34 @@
 # Comece aqui
 
-Você não precisa entender programação, GitHub ou inteligência artificial.
+Este pacote foi preparado para o time jurídico. O advogado não precisa entender programação, GitHub ou instalação de habilidades.
 
-## Se você usa Codex ou Claude Code no Windows
+## Se você é advogado do escritório
 
-1. Baixe esta pasta e descompacte o arquivo ZIP.
-2. Dê dois cliques em `INSTALAR-HABILIDADE.cmd`.
-3. Aguarde a mensagem `INSTALAÇÃO CONCLUÍDA`.
-4. Abra a pasta do novo caso no Codex ou no Claude Code.
-5. No Codex, escreva: `Use $organizar-caso-juridico`.
-6. No Claude Code, escreva: `Use /organizar-caso-juridico`.
+Depois que o administrador concluir a instalação:
 
-A instalação é feita somente para o usuário atual e não exige acesso de administrador.
+1. Abra uma conversa nova no ChatGPT ou no Claude.
+2. Para um caso novo, escreva: `Quero abrir e organizar um novo caso jurídico.`
+3. Leia o lembrete apresentado.
+4. Coloque todos os arquivos do caso na pasta indicada ou envie os arquivos na conversa.
+5. Quando terminar, responda: `PODE ORGANIZAR`.
+6. Para produzir uma peça, escreva: `Produza a peça adequada com base no caso organizado.`
 
-## Se você usa o ChatGPT pelo navegador
+O guia completo, também escrito para pessoas leigas, está em [GUIA-DO-ADVOGADO.md](GUIA-DO-ADVOGADO.md).
 
-Siga o guia [USAR-NO-CHATGPT.md](USAR-NO-CHATGPT.md). Você enviará apenas um arquivo de instruções ao Projeto do ChatGPT.
+## Se você administra a inteligência artificial do escritório
 
-## Se você usa o Claude pelo navegador
+Publique esta pasta em um repositório privado do GitHub e siga [INSTALACAO-DO-TIME.md](INSTALACAO-DO-TIME.md). Essa instalação disponibiliza três habilidades:
 
-Siga o guia [USAR-NO-CLAUDE.md](USAR-NO-CLAUDE.md). Você poderá adicionar o arquivo único ou conectar este repositório pelo GitHub.
+1. organização e triagem de casos;
+2. análise e redação de peças jurídicas;
+3. produção de conteúdo jurídico sem dados sigilosos.
 
-## Se você vai colocar o pacote no GitHub
+No ChatGPT administrado pelo escritório, o repositório pode ser sincronizado automaticamente todos os dias. No Claude Code, cada pessoa instala o pacote uma vez e pode ativar a atualização automática.
 
-Siga [PUBLICAR-NO-GITHUB.md](PUBLICAR-NO-GITHUB.md). O processo foi preparado para exigir apenas a criação de um repositório privado e a colagem do endereço fornecido pelo GitHub.
+## Alternativa para conta individual
 
-## Para começar um caso
-
-1. Crie uma pasta vazia com o nome interno do caso, sem colocar CPF no nome.
-2. Coloque nela tudo o que foi recebido, inclusive ZIP do WhatsApp, PDF integral do processo, áudios, vídeos, fotografias e documentos.
-3. Abra essa pasta no agente de inteligência artificial.
-4. Peça para usar a habilidade de organização do caso.
-5. Leia o lembrete apresentado pelo agente.
-6. Quando tiver enviado tudo, responda `PODE ORGANIZAR`.
+Se a conta não fizer parte de um espaço de trabalho administrado, use um Projeto e adicione o arquivo `PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md`. Os guias estão em [USAR-NO-CHATGPT.md](USAR-NO-CHATGPT.md) e [USAR-NO-CLAUDE.md](USAR-NO-CLAUDE.md).
 
 ## Regra de segurança
 
-O GitHub deve guardar somente estas instruções e os modelos vazios. Nunca coloque casos reais, processos, conversas, áudios, documentos pessoais ou provas de clientes no repositório.
+O GitHub deste pacote deve guardar somente instruções, habilidades e modelos vazios. Nunca envie ao repositório casos reais, processos, conversas, áudios, documentos pessoais ou provas de clientes.

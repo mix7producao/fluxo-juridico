@@ -19,15 +19,21 @@ if ($LASTEXITCODE -ne 0) { throw 'Não foi possível atualizar o pacote único.'
 & git add --all
 if ($LASTEXITCODE -ne 0) { throw 'Não foi possível preparar os arquivos para publicação.' }
 
-$arquivosPreparados = @(& git diff --cached --name-only)
+$arquivosRastreados = @(& git ls-files)
 $extensoesBloqueadas = @(
-    '.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.rar', '.7z',
+    '.pdf', '.doc', '.docx', '.dotx', '.xls', '.xlsx', '.zip', '.rar', '.7z',
     '.mp3', '.wav', '.m4a', '.ogg', '.mp4', '.mov', '.avi',
     '.jpg', '.jpeg', '.png', '.webp', '.heic'
 )
 $arquivosBloqueados = @(
-    $arquivosPreparados | Where-Object {
-        $extensoesBloqueadas -contains [System.IO.Path]::GetExtension($_).ToLowerInvariant()
+    $arquivosRastreados | Where-Object {
+        $caminhoNormalizado = $_.Replace('\\', '/')
+        $extensao = [System.IO.Path]::GetExtension($_).ToLowerInvariant()
+        $ehPapelTimbradoAprovado =
+            ($extensao -in @('.docx', '.dotx')) -and
+            $caminhoNormalizado.StartsWith('plugins/sa-fluxo-juridico/assets/papeis-timbrados/')
+
+        ($extensoesBloqueadas -contains $extensao) -and (-not $ehPapelTimbradoAprovado)
     }
 )
 

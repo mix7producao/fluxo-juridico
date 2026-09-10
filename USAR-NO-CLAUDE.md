@@ -1,25 +1,37 @@
 # Usar no Claude
 
+## Claude Code, opção recomendada
+
+Cada advogado executa somente estes dois comandos, uma única vez:
+
+```text
+/plugin marketplace add ORGANIZACAO/REPOSITORIO
+/plugin install sa-fluxo-juridico@sa-advocacia
+```
+
+O administrador substituirá `ORGANIZACAO/REPOSITORIO` pelo endereço curto do GitHub, por exemplo `nome-do-escritorio/fluxo-juridico`.
+
+Depois da instalação, abra `/plugin`, entre em `Marketplaces`, selecione `sa-advocacia` e ative `Enable auto-update`. Assim, as novas versões publicadas no GitHub serão recebidas automaticamente.
+
+Para usar, abra a pasta do caso e escreva:
+
+```text
+Quero abrir e organizar um novo caso jurídico.
+```
+
 ## Claude pelo navegador
 
-1. Abra o Claude.
-2. Clique em `Projects` e depois em `New Project`.
-3. Dê ao projeto o nome `SA Advocacia`.
-4. Na área de conhecimento do projeto, envie `PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md`.
-5. Se preferir usar o GitHub, escolha `GitHub`, cole a URL deste repositório e selecione o arquivo único.
-6. Nas instruções do projeto, cole o texto abaixo.
+Se a conta usar Projects:
+
+1. crie um Projeto chamado `SA Advocacia`;
+2. conecte o repositório pelo GitHub ou adicione `PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md` ao conhecimento do Projeto;
+3. selecione os arquivos de instrução do repositório;
+4. abra uma conversa nova para cada caso.
+
+Use esta instrução no Projeto:
 
 ```text
 Leia integralmente o arquivo PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md antes de atuar. Siga essas regras em todas as conversas deste projeto. Em um caso novo, faça primeiro somente os lembretes de recebimento e aguarde a expressão PODE ORGANIZAR antes de processar os documentos. Nunca invente informações e nunca afirme que alterou ou organizou arquivos sem ter acesso real a eles.
 ```
 
-Para cada caso, abra uma conversa nova dentro do projeto, envie os arquivos e escreva: `Quero abrir e organizar um novo caso jurídico.`
-
-## Claude Code no Windows
-
-1. Baixe e descompacte este repositório.
-2. Dê dois cliques em `INSTALAR-HABILIDADE.cmd`.
-3. Abra a pasta do caso no Claude Code.
-4. Escreva: `Use /organizar-caso-juridico`.
-
-Documentação oficial: <https://support.claude.com/en/articles/10167454-use-the-github-integration>
+A conexão do Projeto fornece contexto atualizado, mas não equivale à instalação central do plug-in em todas as contas.

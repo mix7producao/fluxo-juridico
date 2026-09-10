@@ -1,0 +1,13 @@
+{
+  "name": "sa-advocacia",
+  "owner": {
+    "name": "Sousa Araújo Advocacia"
+  },
+  "plugins": [
+    {
+      "name": "sa-fluxo-juridico",
+      "source": "./plugins/sa-fluxo-juridico",
+      "description": "Organização de casos, redação de peças e conteúdo jurídico do escritório."
+    }
+  ]
+}

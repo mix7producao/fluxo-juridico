@@ -1,0 +1,20 @@
+{
+  "name": "sa-advocacia",
+  "interface": {
+    "displayName": "Sa Advocacia"
+  },
+  "plugins": [
+    {
+      "name": "sa-fluxo-juridico",
+      "source": {
+        "source": "local",
+        "path": "./plugins/sa-fluxo-juridico"
+      },
+      "policy": {
+        "installation": "INSTALLED_BY_DEFAULT",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,26 +1,38 @@
 # Usar no ChatGPT
 
-## Configuração feita uma única vez
+## Opção recomendada para o escritório
 
-1. Abra o ChatGPT.
-2. Clique em `Novo projeto`.
-3. Dê ao projeto o nome `SA Advocacia`.
-4. Abra a área de arquivos ou fontes do projeto.
-5. Envie o arquivo `PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md`.
-6. Abra as configurações do projeto e cole a instrução abaixo.
+O administrador instala o marketplace privado uma única vez no espaço de trabalho do ChatGPT. Depois, instala `Fluxo Jurídico SA Advocacia` para os advogados autorizados e deixa a sincronização diária ativa.
+
+O advogado não instala arquivos. Ele apenas abre uma conversa nova e escreve:
+
+```text
+Quero abrir e organizar um novo caso jurídico.
+```
+
+Para redigir, escreve:
+
+```text
+Produza a peça adequada com base no caso organizado.
+```
+
+O procedimento do administrador está em [INSTALACAO-DO-TIME.md](INSTALACAO-DO-TIME.md).
+
+## Alternativa para conta individual
+
+Se a conta não pertencer a um espaço de trabalho administrado:
+
+1. crie um Projeto chamado `SA Advocacia`;
+2. adicione `PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md` aos arquivos do Projeto;
+3. cole nas instruções do Projeto o texto abaixo;
+4. abra uma conversa nova dentro do Projeto para cada caso.
 
 ```text
 Leia integralmente o arquivo PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md antes de atuar. Siga essas regras em todas as conversas deste projeto. Em um caso novo, faça primeiro somente os lembretes de recebimento e aguarde a expressão PODE ORGANIZAR antes de processar os documentos. Nunca invente informações e nunca afirme que alterou ou organizou arquivos sem ter acesso real a eles.
 ```
 
-## Para cada caso novo
+Essa alternativa fornece as instruções, mas não instala centralmente o plug-in para outras contas.
 
-1. Inicie uma conversa nova dentro do projeto `SA Advocacia`.
-2. Envie os arquivos do caso. O ZIP do WhatsApp deve ser enviado intacto.
-3. Escreva: `Quero abrir e organizar um novo caso jurídico.`
-4. Confira o lembrete apresentado.
-5. Termine de enviar os documentos e responda `PODE ORGANIZAR`.
+## Limite importante
 
-O ChatGPT pelo navegador trabalha com os arquivos enviados ou com fontes conectadas. Para organizar diretamente uma pasta do computador, use o Codex no computador com a habilidade instalada.
-
-Documentação oficial: <https://learn.chatgpt.com/docs/projects>
+O ChatGPT pelo navegador trabalha com os arquivos enviados ou com fontes conectadas. Para organizar diretamente uma pasta do computador, use o Codex com acesso a essa pasta.

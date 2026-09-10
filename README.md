@@ -1,60 +1,46 @@
-# Instruções de IA da SA Advocacia
+# Fluxo Jurídico da SA Advocacia
 
-Esta pasta concentra o padrão de trabalho da Dra. Lidiane Sousa Araújo para produção de peças jurídicas e de conteúdo, em formato legível por agentes de inteligência artificial.
+Pacote de habilidades e instruções do escritório para uso no ChatGPT, Codex e Claude.
 
-## Instalação simples
+## O que o pacote faz
 
-Comece pelo arquivo [`COMECE-AQUI.md`](COMECE-AQUI.md). No Windows, `INSTALAR-HABILIDADE.cmd` instala a habilidade no Codex e no Claude Code. Para ChatGPT ou Claude pelo navegador, envie apenas `PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md` ao projeto da plataforma.
+O plug-in `sa-fluxo-juridico` reúne três habilidades:
 
-## Como usar
+1. `organizar-caso-juridico`: recebe uma pasta com documentos mistos, preserva os originais, cria cópias identificadas, transcrições, índices, linha do tempo e checklist de pendências;
+2. `redigir-peca-juridica`: analisa o caso organizado, relaciona fatos e provas, verifica fontes oficiais e produz a peça em Word conforme o padrão do escritório;
+3. `criar-conteudo-juridico`: cria conteúdo institucional e educativo, observando o sigilo e os limites éticos da advocacia.
 
-**No Codex (OpenAI).** O Codex lê automaticamente o arquivo `AGENTS.md` da pasta em que está trabalhando. Basta apontar o Codex para esta pasta, ou copiar esta pasta para dentro do projeto em que ele vai atuar. Para abrir e organizar um caso novo, use `$organizar-caso-juridico`. A versão principal da habilidade está em `habilidades/organizar-caso-juridico`.
+## Instalação para o time
 
-**No Claude Code ou Claude Cowork.** Um arquivo `CLAUDE.md` com o mesmo conteúdo do `AGENTS.md` funciona da mesma forma. Também é possível conectar esta pasta como contexto da sessão.
+Comece por [COMECE-AQUI.md](COMECE-AQUI.md). O administrador encontra o passo a passo em [INSTALACAO-DO-TIME.md](INSTALACAO-DO-TIME.md). O advogado usa somente [GUIA-DO-ADVOGADO.md](GUIA-DO-ADVOGADO.md).
 
-**No ChatGPT, Gemini ou similar sem acesso a pasta.** Cole o conteúdo de `AGENTS.md` no campo de instruções personalizadas ou no início da conversa, e anexe os arquivos da pasta `instrucoes/` conforme a tarefa. Para caso novo, use também `prompts/PROMPT-PORTATIL-ABERTURA-E-ORGANIZACAO-DE-CASO.md`. A plataforma só pode afirmar que organizou arquivos quando possuir acesso real a eles.
+O repositório contém os formatos de distribuição aceitos pelo ecossistema OpenAI e pelo Claude:
 
-## Fluxo rápido para um caso novo
-
-1. Duplique `modelos/MODELO-DE-PASTA-PARA-NOVO-CASO` e dê à cópia o nome interno do caso, ou peça à habilidade que crie a estrutura.
-2. Inicie `$organizar-caso-juridico`.
-3. Coloque tudo o que foi recebido em `00 - ORIGINAIS RECEBIDOS - NAO ALTERAR`.
-4. Para WhatsApp, exporte a conversa com mídias e envie o ZIP intacto.
-5. Inclua o PDF integral do processo, quando houver.
-6. Informe prazo, audiência ou urgência.
-7. Diga `PODE ORGANIZAR`.
-
-A organização usa Terra ou modelo equilibrado equivalente. Sol fica para análise jurídica e redação. Astra fica reservado para complexidade excepcional ou revisão final sensível. Os nomes e a disponibilidade dos modelos devem ser conferidos na plataforma no momento do uso.
-
-## Estrutura
-
+```text
+.agents/plugins/marketplace.json
+.claude-plugin/marketplace.json
+plugins/sa-fluxo-juridico/
 ```
-000 - Instruções IA/
-├── AGENTS.md                 arquivo de entrada, regras principais
-├── README.md                 este arquivo
-└── instrucoes/
-    ├── 01-perfil-escritorio.md
-    ├── 02-formatacao-documentos.md
-    ├── 03-regras-peca-otimizada-ia.md
-    ├── 04-validacao-provas-e-jurisprudencia.md
-    ├── 05-portugues-utf8.md
-    ├── 06-fluxo-de-trabalho.md
-    ├── 07-modelos-estruturas.md
-    ├── 08-checklist-final.md
-    ├── 09-escopo-conteudo-redes.md
-    └── 10-abertura-e-organizacao-de-caso.md
-├── habilidades/
-│   └── organizar-caso-juridico/
-│       ├── SKILL.md
-│       ├── agents/
-│       ├── references/
-│       └── scripts/
-├── modelos/
-│   └── MODELO-DE-PASTA-PARA-NOVO-CASO/
-└── prompts/
-    └── PROMPT-PORTATIL-ABERTURA-E-ORGANIZACAO-DE-CASO.md
-```
+
+## Fluxo de um caso
+
+1. Receber todos os documentos, inclusive ZIP integral do WhatsApp e PDF integral do processo.
+2. Preservar os originais sem alteração.
+3. Criar cópias de trabalho identificadas como `PROVA-0001` e números seguintes.
+4. Transcrever PDFs, áudios e vídeos para Markdown, sem substituir o original.
+5. Produzir índice, resumo, linha do tempo, mapa de provas e pendências.
+6. Fazer perguntas somente depois de examinar o material disponível.
+7. Produzir a peça em Word, relacionando cada afirmação à prova correspondente.
+8. Renderizar e revisar todas as páginas antes da entrega.
+
+## Modelos de inteligência artificial
+
+Use um modelo equilibrado, como Terra ou equivalente, para organização mecânica, extração e classificação. Use Sol ou equivalente para análise jurídica e redação. Reserve Astra ou outro modelo de maior capacidade para casos excepcionalmente complexos e revisão final sensível. Os nomes e a disponibilidade devem ser conferidos na plataforma no momento do uso.
+
+## Segurança
+
+Este repositório deve conter somente regras, habilidades e modelos vazios. Casos reais e provas de clientes devem permanecer fora do GitHub.
 
 ## Manutenção
 
-Sempre que um padrão novo for adotado, atualize o arquivo correspondente em `instrucoes/` e, se for regra estruturante, registre também no `AGENTS.md`. Arquivos de modelo em .docx (timbrado, procuração, contrato de honorários) podem ser guardados em uma subpasta `modelos/` desta mesma pasta, e o agente será orientado a usá-los.
+As regras principais estão em `AGENTS.md` e os detalhes em `instrucoes/`. Depois de uma alteração aprovada, publique uma nova versão no GitHub. O ChatGPT administrado pode sincronizar o repositório diariamente. No Claude Code, habilite a atualização automática do marketplace.

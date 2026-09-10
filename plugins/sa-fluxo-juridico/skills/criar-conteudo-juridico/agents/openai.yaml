@@ -1,0 +1,4 @@
+interface:
+  display_name: "Criar conteúdo jurídico"
+  short_description: "Cria conteúdo jurídico educativo e ético"
+  default_prompt: "Use $criar-conteudo-juridico para produzir conteúdo jurídico educativo conforme as regras do escritório."

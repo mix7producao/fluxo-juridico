@@ -1,0 +1,22 @@
+{
+  "name": "sa-fluxo-juridico",
+  "version": "1.0.0",
+  "description": "Organiza casos, analisa provas, redige peças jurídicas e cria conteúdo conforme o padrão da Sousa Araújo Advocacia.",
+  "author": {
+    "name": "Sousa Araújo Advocacia"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Fluxo Jurídico SA Advocacia",
+    "shortDescription": "Organização de casos e produção jurídica",
+    "longDescription": "Pacote do escritório para organizar provas, preparar o contexto do caso, redigir peças editáveis e criar conteúdo jurídico com regras de sigilo, validação e qualidade.",
+    "developerName": "Sousa Araújo Advocacia",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Organize este novo caso jurídico.",
+      "Analise o caso e produza a peça jurídica.",
+      "Crie conteúdo jurídico educativo."
+    ]
+  }
+}
