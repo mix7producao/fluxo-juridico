@@ -1,22 +1,25 @@
 {
   "name": "sa-fluxo-juridico",
-  "version": "1.0.0",
-  "description": "Organiza casos, analisa provas, redige peças jurídicas e cria conteúdo conforme o padrão da Sousa Araújo Advocacia.",
+  "version": "1.0.0+codex.20260910150246",
+  "description": "Organiza casos, analisa provas, redige pe\u00e7as jur\u00eddicas e cria conte\u00fado conforme o padr\u00e3o da Sousa Ara\u00fajo Advocacia.",
   "author": {
-    "name": "Sousa Araújo Advocacia"
+    "name": "Sousa Ara\u00fajo Advocacia"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "Fluxo Jurídico SA Advocacia",
-    "shortDescription": "Organização de casos e produção jurídica",
-    "longDescription": "Pacote do escritório para organizar provas, preparar o contexto do caso, redigir peças editáveis e criar conteúdo jurídico com regras de sigilo, validação e qualidade.",
-    "developerName": "Sousa Araújo Advocacia",
+    "displayName": "Fluxo Jur\u00eddico SA Advocacia",
+    "shortDescription": "Organiza\u00e7\u00e3o de casos e produ\u00e7\u00e3o jur\u00eddica",
+    "longDescription": "Pacote do escrit\u00f3rio para organizar provas, preparar o contexto do caso, redigir pe\u00e7as edit\u00e1veis e criar conte\u00fado jur\u00eddico com regras de sigilo, valida\u00e7\u00e3o e qualidade.",
+    "developerName": "Sousa Ara\u00fajo Advocacia",
     "category": "Productivity",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "defaultPrompt": [
-      "Organize este novo caso jurídico.",
-      "Analise o caso e produza a peça jurídica.",
-      "Crie conteúdo jurídico educativo."
+      "Organize este novo caso jur\u00eddico.",
+      "Analise o caso e produza a pe\u00e7a jur\u00eddica.",
+      "Crie conte\u00fado jur\u00eddico educativo."
     ]
   }
 }

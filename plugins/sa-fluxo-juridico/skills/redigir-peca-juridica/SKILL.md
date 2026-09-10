@@ -27,7 +27,7 @@ Produza uma peça juridicamente fundamentada, documentalmente rastreável e pron
 
 ## Documento editável
 
-Entregue a peça em DOCX sempre que o ambiente permitir. Use o papel timbrado exato disponível em `../../assets/papeis-timbrados/`. Não substitua um escritório por outro e não improvise logotipo. Se o modelo correto estiver ausente, informe a pendência e aplique apenas o padrão de formatação descrito nas referências.
+Entregue a peça em DOCX sempre que o ambiente permitir. Para a Sousa Araújo Advocacia, use uma cópia de `../../assets/papeis-timbrados/PAPEL-TIMBRADO-OFICIAL-SA-ADVOCACIA.docx` e preserve intacto o arquivo do plug-in. Confira o hash registrado em `../../assets/papeis-timbrados/LEIA-ME.md` antes de usar. Não substitua um escritório por outro e não improvise logotipo. Se o modelo correto estiver ausente, informe a pendência e aplique apenas o padrão de formatação descrito nas referências.
 
 Não coloque imagens ou capturas no corpo da peça. Transcreva o conteúdo relevante e remeta ao anexo. Depois de criar ou editar o DOCX, renderize todas as páginas, confira visualmente e corrija qualquer falha antes da entrega. Se o ambiente não puder criar DOCX, entregue Markdown estruturado e declare essa limitação, sem afirmar que produziu arquivo Word.
 
