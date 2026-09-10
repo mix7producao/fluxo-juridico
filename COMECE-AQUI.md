@@ -15,6 +15,8 @@ Depois que o administrador concluir a instalação:
 
 O guia completo, também escrito para pessoas leigas, está em [GUIA-DO-ADVOGADO.md](GUIA-DO-ADVOGADO.md).
 
+Se preferir um manual visual em Word, abra `guias/MANUAL-DO-ADVOGADO-FLUXO-JURIDICO-SA-ADVOCACIA.docx`.
+
 ## Se você administra a inteligência artificial do escritório
 
 Publique esta pasta em um repositório privado do GitHub e siga [INSTALACAO-DO-TIME.md](INSTALACAO-DO-TIME.md). Essa instalação disponibiliza três habilidades:

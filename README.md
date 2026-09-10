@@ -14,6 +14,8 @@ O plug-in `sa-fluxo-juridico` reúne três habilidades:
 
 Comece por [COMECE-AQUI.md](COMECE-AQUI.md). O administrador encontra o passo a passo em [INSTALACAO-DO-TIME.md](INSTALACAO-DO-TIME.md). O advogado usa somente [GUIA-DO-ADVOGADO.md](GUIA-DO-ADVOGADO.md).
 
+Para treinamento de pessoas sem familiaridade com tecnologia, use também o arquivo Word `guias/MANUAL-DO-ADVOGADO-FLUXO-JURIDICO-SA-ADVOCACIA.docx`.
+
 O repositório contém os formatos de distribuição aceitos pelo ecossistema OpenAI e pelo Claude:
 
 ```text

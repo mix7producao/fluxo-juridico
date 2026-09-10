@@ -32,8 +32,11 @@ $arquivosBloqueados = @(
         $ehPapelTimbradoAprovado =
             ($extensao -in @('.docx', '.dotx')) -and
             $caminhoNormalizado.StartsWith('plugins/sa-fluxo-juridico/assets/papeis-timbrados/')
+        $ehManualAprovado =
+            ($extensao -eq '.docx') -and
+            ($caminhoNormalizado -eq 'guias/MANUAL-DO-ADVOGADO-FLUXO-JURIDICO-SA-ADVOCACIA.docx')
 
-        ($extensoesBloqueadas -contains $extensao) -and (-not $ehPapelTimbradoAprovado)
+        ($extensoesBloqueadas -contains $extensao) -and (-not $ehPapelTimbradoAprovado) -and (-not $ehManualAprovado)
     }
 )
 
