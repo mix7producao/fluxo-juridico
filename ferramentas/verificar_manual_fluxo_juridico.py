@@ -29,14 +29,15 @@ def main():
     document = Document(FINAL)
     body = "\n".join(paragraph.text for paragraph in document.paragraphs)
     required = (
-        "Manual de instalação do Fluxo Jurídico",
-        "https://github.com/mix7producao/fluxo-juridico",
-        "ChatGPT para a equipe",
-        "Codex",
-        "Claude no navegador",
-        "Claude Code",
-        "Como a peça em Word será entregue",
-        "Regra de sigilo",
+        "Guia de instalação no ChatGPT e Claude pessoais",
+        "Instalação no ChatGPT pessoal",
+        "Instalação no Claude pessoal",
+        "PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md",
+        "PAPEL-TIMBRADO-OFICIAL-SA-ADVOCACIA.docx",
+        "Para que serve",
+        "Como usar em um caso novo",
+        "Limite importante",
+        "Como atualizar",
     )
     if not all(item in body for item in required):
         raise RuntimeError("O manual não contém todas as seções obrigatórias.")

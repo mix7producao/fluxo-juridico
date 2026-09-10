@@ -244,96 +244,76 @@ def main():
         title_properties.remove(title_border)
 
     add_paragraph(doc, "\u00a0", size=1, color=WHITE, space_after=46)
-    add_paragraph(doc, "Manual de instalação do Fluxo Jurídico", style="Title", size=22, bold=True, space_after=4)
-    add_paragraph(doc, "Como usar no ChatGPT Codex Claude e Claude Code", size=12, color=GRAY, space_after=16)
+    add_paragraph(doc, "Guia de instalação no ChatGPT e Claude pessoais", style="Title", size=21, bold=True, space_after=4)
+    add_paragraph(doc, "Primeiro instale. Depois veja para que serve e como usar.", size=12, color=GRAY, space_after=16)
     add_paragraph(
         doc,
-        "Este manual ensina como instalar e usar o pacote de trabalho jurídico da Sousa Araújo Advocacia. Você não precisa entender programação. Escolha abaixo a ferramenta que já utiliza e siga somente aquele caminho.",
+        "Este guia é para contas pessoais do ChatGPT e do Claude. Não exige conta Business, programação ou conhecimento técnico.",
         size=11,
         space_after=12,
     )
 
-    add_heading(doc, "Link oficial para copiar")
-    add_paragraph(doc, "Copie o endereço abaixo exatamente como está.", size=11, space_after=2)
-    add_link(doc, "https://github.com/mix7producao/fluxo-juridico")
+    add_heading(doc, "Tenha estes dois arquivos em mãos")
+    add_bullet(doc, "PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md")
+    add_bullet(doc, "PAPEL-TIMBRADO-OFICIAL-SA-ADVOCACIA.docx")
+    add_paragraph(doc, "Os dois arquivos são enviados junto com este manual. Não altere o conteúdo deles.", size=10.5, bold=True, space_after=10)
 
-    add_heading(doc, "O que o pacote faz")
+    add_heading(doc, "Instalação no ChatGPT pessoal")
+    add_numbered(doc, 1, "Entre no ChatGPT", "com sua conta pessoal.")
+    add_numbered(doc, 2, "Proteja os dados dos clientes", "clique na sua foto, abra Configurações e Controles de dados e desative Melhorar o modelo para todos.")
+    add_numbered(doc, 3, "Clique em Novo projeto", "na barra lateral.")
+    add_numbered(doc, 4, "Dê um nome ao projeto", "por exemplo, CASO 2026-001.")
+    add_numbered(doc, 5, "Adicione os dois arquivos", "use Adicionar arquivos ou Adicionar fonte e selecione o pacote e o papel timbrado.")
+    add_numbered(doc, 6, "Abra as configurações do projeto", "e cole a instrução abaixo no campo Instruções do projeto.")
+    add_prompt(doc, "Leia e siga integralmente o arquivo PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md. Use o papel timbrado oficial nas peças em Word. Nunca invente informações.")
+    add_numbered(doc, 7, "Inicie um novo chat dentro do projeto", "e use a frase de teste abaixo.")
+    add_prompt(doc, "Confirme que leu as instruções da SA Advocacia e diga, em poucas linhas, quais tarefas pode realizar.")
+
+    doc.add_section(WD_SECTION.NEW_PAGE)
+    add_paragraph(doc, "\u00a0", size=1, color=WHITE, space_after=46)
+    add_heading(doc, "Instalação no Claude pessoal")
+    add_numbered(doc, 1, "Entre no Claude", "com sua conta pessoal e abra Projetos.")
+    add_numbered(doc, 2, "Proteja os dados dos clientes", "abra Configurações e Privacidade e deixe desativada qualquer opção que autorize o uso das conversas para melhorar o Claude.")
+    add_numbered(doc, 3, "Clique em Novo projeto", "ou New Project.")
+    add_numbered(doc, 4, "Dê um nome ao projeto", "por exemplo, CASO 2026-001.")
+    add_numbered(doc, 5, "Adicione os dois arquivos", "na área Conhecimento do projeto ou Project knowledge.")
+    add_numbered(doc, 6, "Defina as instruções do projeto", "clique em Set project instructions e cole a instrução abaixo.")
+    add_prompt(doc, "Leia e siga integralmente o arquivo PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md. Use o papel timbrado oficial nas peças em Word. Nunca invente informações.")
+    add_numbered(doc, 7, "Inicie um novo chat dentro do projeto", "e use a frase de teste abaixo.")
+    add_prompt(doc, "Confirme que leu as instruções da SA Advocacia e diga, em poucas linhas, quais tarefas pode realizar.")
+
+    add_heading(doc, "Atenção ao separar os casos")
+    add_paragraph(doc, "Crie um projeto diferente para cada cliente ou processo. Repita a instalação dos dois arquivos em cada projeto. Isso evita misturar informações de casos diferentes.", size=11, bold=True)
+
+    add_heading(doc, "Como atualizar")
+    add_paragraph(doc, "Quando receber uma versão nova do arquivo PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md, exclua a versão antiga do projeto e envie a nova. Troque o papel timbrado somente quando o escritório enviar uma versão atualizada.", size=10.5, space_after=0)
+
+    doc.add_section(WD_SECTION.NEW_PAGE)
+    add_paragraph(doc, "\u00a0", size=1, color=WHITE, space_after=46)
+    add_heading(doc, "Para que serve")
     for text in (
-        "Organiza processos, documentos, conversas, áudios, vídeos e demais provas sem alterar os originais.",
-        "Cria índice, linha do tempo, resumo, perguntas pendentes e identificação permanente das provas, como PROVA-0001.",
-        "Produz e revisa peças jurídicas em Word, depois que o caso estiver organizado.",
-        "Aplica o papel timbrado oficial, a formatação e as cores definidas pelo escritório.",
-        "Ajuda a criar conteúdo jurídico institucional e educativo dentro das regras do escritório.",
+        "Organizar os arquivos que você enviar, incluindo processos em PDF, conversas exportadas do WhatsApp, documentos, áudios, vídeos e imagens.",
+        "Criar índice, resumo, linha do tempo, lista do que cada prova demonstra e perguntas sobre o que ainda estiver faltando.",
+        "Identificar as provas de forma permanente, como PROVA-0001, sem alterar os arquivos originais.",
+        "Preparar e revisar peças jurídicas em Word com a estrutura, a formatação e o papel timbrado oficial do escritório.",
+        "Separar fatos comprovados de alegações e marcar claramente qualquer informação que ainda precise de confirmação.",
     ):
         add_bullet(doc, text)
 
-    add_heading(doc, "Qual opção escolher")
-    add_bullet(doc, "ChatGPT: recomendado para a equipe. O administrador importa uma vez.")
-    add_bullet(doc, "Codex: recomendado para organizar pastas, arquivos e peças em Word.")
-    add_bullet(doc, "Claude: uso simples no navegador por meio de um Projeto conectado ao GitHub.")
-    add_bullet(doc, "Claude Code: trabalho completo com pastas e arquivos, instalado com dois comandos.")
+    add_heading(doc, "Como usar em um caso novo")
+    add_numbered(doc, 1, "Abra o projeto daquele caso", "nunca use o projeto de outro cliente.")
+    add_numbered(doc, 2, "Envie tudo o que tiver", "inclusive o processo completo, documentos, conversas, ZIP do WhatsApp, áudios, vídeos e imagens.")
+    add_numbered(doc, 3, "Peça a organização", "envie a frase abaixo depois de terminar todos os anexos.")
+    add_prompt(doc, "Quero abrir e organizar um novo caso jurídico. Primeiro confira o que enviei e me lembre, de forma simples, o que pode estar faltando. Só comece quando eu escrever PODE ORGANIZAR.")
+    add_numbered(doc, 4, "Responda às perguntas complementares", "elas serão feitas somente depois da leitura do material enviado.")
+    add_numbered(doc, 5, "Peça a peça jurídica", "quando a organização estiver concluída, use a frase abaixo.")
+    add_prompt(doc, "Analise o caso organizado e produza a peça jurídica adequada em Word, usando o papel timbrado oficial. Não invente informações e liste tudo que ainda depende de confirmação.")
 
-    doc.add_section(WD_SECTION.NEW_PAGE)
-    add_paragraph(doc, "\u00a0", size=1, color=WHITE, space_after=46)
-    add_heading(doc, "ChatGPT para a equipe")
-    add_paragraph(doc, "Este é o caminho recomendado para vários advogados. Somente o administrador faz a importação. Depois, cada advogado instala ou recebe o plug-in conforme a política escolhida pelo escritório.", size=11)
-    add_numbered(doc, 1, "Abra a Administração", "entre em Plug-ins e escolha Adicionar e Importar marketplace.")
-    add_numbered(doc, 2, "Cole o link oficial", "no campo Origem.")
-    add_numbered(doc, 3, "Deixe Caminho vazio", "porque o arquivo do marketplace já está na raiz do repositório.")
-    add_numbered(doc, 4, "Deixe Branch tag ou commit vazio", "para acompanhar a versão principal e receber as atualizações futuras.")
-    add_numbered(doc, 5, "Clique em Importar marketplace", "e autorize o acesso ao GitHub quando aparecer.")
-    add_numbered(doc, 6, "Abra o plug-in SA Fluxo Jurídico", "e escolha a política Instalado para os advogados que devem recebê-lo automaticamente.")
-    add_numbered(doc, 7, "Abra um novo chat", "e peça a tarefa normalmente.")
-    add_paragraph(doc, "Se você não encontrar o menu Administração, peça esta instalação ao administrador da conta do escritório.", size=10.5, bold=True, space_before=3)
+    add_heading(doc, "Limite importante")
+    add_paragraph(doc, "O ChatGPT e o Claude pessoais somente conseguem analisar os arquivos que você enviar ao projeto ou ao chat. Eles não abrem sozinhos uma pasta do seu computador. A advogada responsável deve revisar a peça antes de assinar ou protocolar.", size=10.5, bold=True)
 
-    add_heading(doc, "Codex")
-    add_paragraph(doc, "O Codex é a opção mais prática para organizar uma pasta inteira de caso, converter arquivos, transcrever materiais e produzir documentos. Se o plug-in já foi liberado no workspace do ChatGPT, abra Plug-ins, instale SA Fluxo Jurídico e inicie uma nova tarefa. No Codex CLI, digite o comando abaixo para abrir o catálogo de plug-ins.", size=11)
-    add_prompt(doc, "/plugins")
-
-    doc.add_section(WD_SECTION.NEW_PAGE)
-    add_paragraph(doc, "\u00a0", size=1, color=WHITE, space_after=46)
-    add_heading(doc, "Claude no navegador")
-    add_paragraph(doc, "No Claude comum, use um Projeto conectado ao GitHub. Ele recebe as instruções do escritório, mas não substitui o Codex ou o Claude Code para trabalhar diretamente com uma pasta inteira do computador.", size=11)
-    add_numbered(doc, 1, "Crie um Projeto", "com o nome Fluxo Jurídico SA Advocacia.")
-    add_numbered(doc, 2, "Na área de conhecimento do Projeto", "clique no sinal de mais e escolha GitHub.")
-    add_numbered(doc, 3, "Cole o link oficial", "autorize o GitHub e selecione os arquivos do repositório.")
-    add_numbered(doc, 4, "Quando o repositório for atualizado", "use Sincronizar antes de começar um trabalho novo.")
-
-    add_heading(doc, "Claude Code")
-    add_paragraph(doc, "Abra o Claude Code e envie os dois comandos abaixo, um de cada vez.", size=11)
-    add_prompt(doc, "/plugin marketplace add mix7producao/fluxo-juridico")
-    add_prompt(doc, "/plugin install sa-fluxo-juridico@sa-advocacia")
-    add_paragraph(doc, "Para receber atualizações automáticas, abra /plugin, entre em Marketplaces, escolha sa-advocacia e ative Enable auto-update. Se aparecer a mensagem para recarregar, use /reload-plugins.", size=11)
-
-    doc.add_section(WD_SECTION.NEW_PAGE)
-    add_paragraph(doc, "\u00a0", size=1, color=WHITE, space_after=46)
-    add_heading(doc, "Como começar depois da instalação")
-    add_paragraph(doc, "Para organizar um caso, coloque todos os arquivos na pasta do caso e use a frase abaixo.", size=11, space_after=2)
-    add_prompt(doc, "Quero abrir e organizar um novo caso jurídico.")
-    add_paragraph(doc, "A ferramenta primeiro lembrará o que pode estar faltando. Quando você confirmar que terminou de enviar, ela preservará os originais e começará a organização.", size=11)
-    add_paragraph(doc, "Depois que o caso estiver organizado, use a frase abaixo para produzir a peça.", size=11, space_after=2)
-    add_prompt(doc, "Analise o caso organizado e produza a peça jurídica adequada em Word. Não invente informações e liste tudo que ainda depende de confirmação.")
-
-    add_heading(doc, "Como a peça em Word será entregue")
-    roles = doc.add_table(rows=1, cols=2)
-    roles.rows[0].cells[0].text = "O pacote prepara"
-    roles.rows[0].cells[1].text = "A advogada revisa"
-    role_rows = (
-        ("Arquivo editável em Word no papel timbrado oficial.", "Se o timbrado correto foi usado para aquele escritório."),
-        ("Formatação, cores e estrutura definidas nas instruções do escritório.", "Estratégia, fatos, pedidos, valores, prazos e anexos."),
-        ("Indicação clara do que está comprovado e do que precisa ser confirmado.", "Versão final antes de assinar ou protocolar."),
-    )
-    for left, right in role_rows:
-        cells = roles.add_row().cells
-        cells[0].text = left
-        cells[1].text = right
-    format_table(roles, (Cm(7.65), Cm(7.65)))
-
-    add_heading(doc, "Regra de sigilo")
-    add_paragraph(doc, "O GitHub guarda somente o manual, as instruções e os modelos vazios. Processos, conversas, provas, documentos pessoais e dados de clientes ficam exclusivamente na pasta de cada caso.", size=11, bold=True, space_after=0)
-
-    doc.core_properties.title = "Manual de instalação do Fluxo Jurídico"
-    doc.core_properties.subject = "Instalação e uso no ChatGPT, Codex, Claude e Claude Code"
+    doc.core_properties.title = "Guia de instalação no ChatGPT e Claude pessoais"
+    doc.core_properties.subject = "Instalação e uso do Fluxo Jurídico em contas pessoais"
     doc.core_properties.author = "Sousa Araújo Advocacia"
     doc.save(OUTPUT)
     preservar_timbrado_e_adicionar_descricao()
