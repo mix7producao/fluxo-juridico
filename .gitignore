@@ -1,0 +1,19 @@
+# Dados reais e material sigiloso
+casos-locais/
+clientes/
+dados-clientes/
+segredos/
+
+# Credenciais e configurações particulares
+.env
+.env.*
+*.key
+*.pem
+
+# Saídas locais e temporários
+Claude outputs/
+__pycache__/
+*.pyc
+*.tmp
+*.log
+PACOTE-PARA-PUBLICACAO.zip
