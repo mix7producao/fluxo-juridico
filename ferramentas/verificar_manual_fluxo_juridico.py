@@ -30,14 +30,19 @@ def main():
     body = "\n".join(paragraph.text for paragraph in document.paragraphs)
     required = (
         "Guia de instalação no ChatGPT e Claude pessoais",
+        "Comece pelo GitHub",
+        "https://github.com/mix7producao/fluxo-juridico",
+        "Como baixar os arquivos",
         "Instalação no ChatGPT pessoal",
+        "Conexão direta com o GitHub no ChatGPT",
         "Instalação no Claude pessoal",
         "PACOTE-UNICO-PARA-CHATGPT-E-CLAUDE.md",
         "PAPEL-TIMBRADO-OFICIAL-SA-ADVOCACIA.docx",
+        "Como atualizar no Claude",
         "Para que serve",
         "Como usar em um caso novo",
         "Limite importante",
-        "Como atualizar",
+        "Como atualizar no ChatGPT",
     )
     if not all(item in body for item in required):
         raise RuntimeError("O manual não contém todas as seções obrigatórias.")
